@@ -55,11 +55,11 @@ function addRepos(buildGradle) {
     var secondHalfOfFile = buildGradle.substring(allProjectsIndex);
 
     // Add google() to the allprojects section of the string
-    match = secondHalfOfFile.match(/^(\s*)jcenter\(\)/m);
-    var googlesMavenRepo = whitespace + 'google() // Google\'s Maven repository from cordova-plugin-firebase';
-    modifiedLine = match[0] + '\n' + googlesMavenRepo;
+    //match = secondHalfOfFile.match(/^(\s*)jcenter\(\)/m);
+    //var googlesMavenRepo = whitespace + 'google() // Google\'s Maven repository from cordova-plugin-firebase';
+    //modifiedLine = match[0] + '\n' + googlesMavenRepo;
     // modify the part of the string that is after 'allprojects'
-    secondHalfOfFile = secondHalfOfFile.replace(/^(\s*)jcenter\(\)/m, modifiedLine);
+    //secondHalfOfFile = secondHalfOfFile.replace(/^(\s*)jcenter\(\)/m, modifiedLine);
 
     // recombine the modified line
     buildGradle = firstHalfOfFile + secondHalfOfFile;
