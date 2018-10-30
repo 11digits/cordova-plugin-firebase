@@ -1,3 +1,11 @@
+Error: Command failed with exit code 1 Error output:
+Failed to notify ProjectEvaluationListener.afterEvaluate(), but primary configuration failure takes precedence.
+java.lang.IllegalStateException: buildToolsVersion is not specified.
+
+FIXED by removing google() line in gradle 
+
+
+
 [![Build Status](https://travis-ci.org/arnesson/cordova-plugin-firebase.svg?branch=master)](https://travis-ci.org/arnesson/cordova-plugin-firebase)
 
 # cordova-plugin-firebase
