@@ -65,9 +65,9 @@ function addRepos(buildGradle) {
     buildGradle = firstHalfOfFile + secondHalfOfFile;
   } else {
     // this should not happen, but if it does, we should try to add the dependency to the buildscript
-    match = buildGradle.match(/^(\s*)jcenter\(\)/m);
-    var googlesMavenRepo = whitespace + 'google() // Google\'s Maven repository from cordova-plugin-firebase';
-    modifiedLine = match[0] + '\n' + googlesMavenRepo;
+    //match = buildGradle.match(/^(\s*)jcenter\(\)/m);
+    //var googlesMavenRepo = whitespace + 'google() // Google\'s Maven repository from cordova-plugin-firebase';
+    //modifiedLine = match[0] + '\n' + googlesMavenRepo;
     // modify the part of the string that is after 'allprojects'
     buildGradle = buildGradle.replace(/^(\s*)jcenter\(\)/m, modifiedLine);
   }
